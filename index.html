@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gourmet Lab Market</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">
+                    <img class="imagen-logo" src="./img/logo-menu.png" alt="Logo Gourmet Lab">
+                </a>
+                <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                    aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="menu">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="./index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/nosotros.html">Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/secciones.html">Secciones</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/novedades.html">Novedades</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+</header>
+<main>
+    <section class="full-pantalla">
+        <img id="background-image" src="./img/fondo.png" alt="Fondo animado">
+    </section>
+    <!-- Intro -->
+    <section class="ubicacion">
+        <h2>Encontra un mundo de sabores, en un solo lugar.</h2>
+        <div class="contenedor-cards">
+             <!-- Card de WhatsApp -->
+             <div class="card">
+                <img src="./img/Group 328.png" alt="WhatsApp">
+                <h3>WhatsApp</h3>
+                <p>Escribinos para consultas</p>
+                <a href="https://wa.me/5492991234567" target="_blank" class="btn">
+                    <button>Chatear</button>
+                </a>
+            </div>
+            <!-- Card de Ubicación -->
+            <div class="card">
+                <img src="./img/icono-ubicacion.png" alt="Ubicación">
+                <h3>Nuestra sucursal</h3>
+                <p>Vení a conocernos</p>
+                <a href="" target="_blank" class="btn">
+                    <button>Ubicación</button>
+                </a>
+            </div>
+    
+            <!-- Card de PedidosYa -->
+            <div class="card">
+                <img src="./img/Group 324.png" alt="PedidosYa">
+                <h3>PedidosYa</h3>
+                <p>Hacé tu pedido online</p>
+                <a href="https://www.pedidosya.com/" target="_blank" class="btn">
+                    <button>Pedir Ahora</button>
+                </a>
+            </div>
+        </div>
+    </section>
+<!-- anuncios del inicio-->
+    <section class="producto-destacado">
+        <h2>⭐ Producto Destacado del Día ⭐</h2>
+    
+        <div class="contenedor-producto">
+            <!-- Imagen del producto -->
+            <div class="producto-imagen">
+                <img src="./img/producto-destacado.jpg" alt="Producto del día">
+            </div>
+    
+            <!-- Información del producto -->
+            <div class="producto-info">
+                <h3>Ravioles de Cordero Patagónico</h3>
+                <p>Disfrutá el auténtico sabor del cordero patagónico en una pasta artesanal, elaborada con ingredientes de primera calidad.</p>
+                <p><strong>🔥 Promoción especial por hoy: 10% OFF</strong></p>
+                <a href="#" class="btn">¡Pedilo Ahora!</a>
+            </div>
+        </div>
+    </section>
+    <!--opiniones-->
+    <section class="opiniones">
+        <h2>⭐ Lo que dicen nuestros clientes ⭐</h2>
+        <div class="opiniones-container">
+            <div class="opiniones-scroll">
+                <div class="opinion-card">
+                    <p>"Productos increíbles y de excelente calidad!"</p>
+                    <h4>- María</h4>
+                </div>
+            </div>
+        </div>
+        <div id="opiniones-lista">
+            <!-- Aquí se cargarán las opiniones dinámicamente -->
+        </div>
+    
+        <!-- Formulario para enviar opiniones -->
+        <div class="opinion-formulario">
+            <h3>📝 Dejanos tu Opinión</h3>
+            <form id="form-opinion">
+                <input type="text" id="nombre" placeholder="Tu Nombre" required>
+                <textarea id="comentario" placeholder="Escribí tu opinión..." required></textarea>
+                <button type="submit" class="btn">Enviar Opinión</button>
+            </form>
+            <p id="mensaje-confirmacion" style="display:none; color: green; margin-top: 10px;">¡Gracias por tu opinión!</p>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Logo y Descripción -->
+        <div class="footer-logo">
+            <img src="./img/logo-footer.png" alt="Gourmet Lab Market">
+            <p>Tu destino gastronómico en Neuquén. Sabores que inspiran, calidad que perdura.</p>
+        </div>
+
+        <!-- Información de Contacto -->
+        <div class="footer-info">
+            <h3>Contacto</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Av. Argentina 123, Neuquén</p>
+            <p><i class="fas fa-phone"></i> +54 299 123 4567</p>
+            <p><i class="fas fa-envelope"></i> info@gourmetlab.com</p>
+        </div>
+
+        <!-- Redes Sociales -->
+        <div class="footer-redes">
+            <h3>Seguinos</h3>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <!-- Derechos de Autor -->
+    <div class="footer-bottom">
+        <p>© 2025 Gourmet Lab Market. Todos los derechos reservados.</p>
+    </div>
+</footer>
+<script type="module" src="js/firebase.js"></script>
+<script type="module" src="js/script.js"></script> 
+</body>
+</html>
+
+

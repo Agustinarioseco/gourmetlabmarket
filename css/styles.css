@@ -1,0 +1,552 @@
+/* Reset General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  
+@font-face{
+    font-family:"bodoni";
+    src:url(../font/LibreBodoni-Regular.ttf)
+}
+@font-face {
+    font-family: "bodoni medium italica";
+    src: url(../font/LibreBodoni-MediumItalic.ttf);
+}
+
+@font-face {
+    font-family: "bodoni bold";
+    src: url(../font/LibreBodoni-Bold.ttf);
+}
+
+/* Estilos generales */
+body {
+    font-family:"bodoni";
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+}
+
+/* Navbar */
+.navbar {
+    font-family: "bodoni";
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: background 0.3s;
+    z-index: 1000;
+}
+
+.navbar.scrolled {
+    background: #f8f8f8;
+}
+
+.navbar-brand img {
+    height: 50px;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #FFD700 !important;
+}
+
+.custom-toggler {
+    border-color: #222 !important;
+}
+
+.navbar-toggler-icon {
+    background-image: none;
+    width: 30px;
+    height: 3px;
+    background-color: #000;
+    display: block;
+    transition: 0.3s;
+}
+/*------------------------Main index------------------------*/
+.full-pantalla {
+    width: 100%; /* Ocupar todo el ancho */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden; /* Evita cualquier desbordamiento */
+}
+
+.full-pantalla img {
+    width: 100%; /* Ocupar todo el ancho */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    display: block; /* Evita espacios en blanco adicionales */
+}
+
+/* main parte de la info para usuarios */
+.ubicacion {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #010101;
+}
+
+main .ubicacion h2 {
+    font-size: 28px;
+    color: #f8f8f8;
+    margin-bottom: 10px;
+    font-family: "bodoni bold";
+    font-size: 36px;
+    margin-bottom:50px ;
+}
+
+.contenedor-cards {
+    font-family: "bodoni";
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.contenedor-cards .card {
+    background: #000;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    border: #d4af37 solid 1px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+    align-self: center;
+}
+
+.card h3 {
+    font-size: 24px;
+    color: #d4af37;
+    margin-bottom: 5px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.btn button {
+    display: inline-block;
+    background: #d35400;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+    background-color: #111;
+}
+
+.btn:hover {
+    background: #222;
+}
+
+/* seccion de productos destacados */
+.producto-destacado {
+    font-family: "bodoni";
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.producto-destacado h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contenedor-producto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.producto-imagen img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.producto-info {
+    text-align: left;
+    max-width: 500px;
+}
+
+.producto-info h3 {
+    font-size: 24px;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.producto-info p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    background: #d35400;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #b03a00;
+}
+
+/*opiniones*/
+
+.opinion-formulario {
+    font-family: "bodoni";
+    text-align: center;
+    margin-top: 30px;
+}
+
+.opinion-formulario h3 {
+    text-align: center;
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.opinion-formulario form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.opinion-formulario input,
+.opinion-formulario textarea {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.opinion-formulario textarea {
+    height: 100px;
+    resize: none;
+}
+
+.opinion-formulario button {
+    background: #d35400;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s;
+}
+
+.opinion-formulario button:hover {
+    background: #b03a00;
+}
+
+.opiniones {
+    font-family: "bodoni";
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f8f8f8;
+}
+
+.opiniones h2 {
+    font-family:"bodoni";
+    font-weight: 600;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Contenedor que permite el scroll horizontal */
+.opiniones-container {
+    font-family: "bodoni";
+    font-weight: 500;
+    font-style: normal;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Contenedor deslizante */
+.opiniones-scroll {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding-bottom: 20px;
+}
+
+/* Ocultar barra de scroll en navegadores modernos */
+.opiniones-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+/* Opiniones (Cards) */
+.opinion-card {
+    min-width: 300px;
+    max-width: 300px;
+    flex: 0 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-style: normal;
+    scroll-snap-align: center;
+    font-family: "bodoni";
+    font-weight: bold;
+}
+
+/* Estilos para el nombre */
+.opinion-card h4 {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #222;
+    font-weight: bold;
+}
+/*------------------------FOTTER--------------------*/
+
+.footer {
+    background-color: #111;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+/* Estilos para Logo y Descripción */
+.footer-logo {
+    max-width: 300px;
+    text-align: left;
+}
+
+.footer-logo img {
+    max-width: 150px;
+    margin-bottom: 10px;
+}
+
+.footer-logo p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* Estilos para la Información */
+.footer-info,
+.footer-redes {
+    text-align: left;
+}
+
+.footer-info h3,
+.footer-redes h3 {
+    color: #d4af37; /* Dorado */
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-info p {
+    font-size: 14px;
+    color: #bbb;
+    margin: 5px 0;
+}
+
+.footer-info i {
+    color: #d4af37; /* Iconos dorados */
+    margin-right: 8px;
+}
+
+/* Estilos para Redes Sociales */
+.footer-redes a {
+    color: #d4af37; /* Dorado */
+    font-size: 20px;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer-redes a:hover {
+    color: #fff;
+}
+
+/* Derechos de Autor */
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 15px;
+    font-size: 12px;
+    color: #bbb;
+}
+
+/* RESPONSIVE: En móviles, columnas en una sola fila */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo, .footer-info, .footer-redes {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        background-color:#000;
+        transition: background-color 0.3s ease-in-out;
+    }
+    .navbar-nav {
+        width: 100%;
+        text-align: center;
+        background-color: #000;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 10px 0;
+    }
+    .full-pantalla{
+        padding: 50px 0px 0px;
+    }
+    .contenedor-ubicacion {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ubicacion-info {
+        text-align: center;
+    }
+    .contenedor-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contenedor-producto {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .producto-info {
+        text-align: center;
+    }
+    .contenedor-opiniones {
+        flex-direction: column;
+        align-items: center;
+    }
+    .opiniones-scroll {
+        gap: 10px;
+        scroll-snap-type: x mandatory;
+    }
+
+    .opinion-card {
+        min-width: 90%;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 430px) {
+    .navbar {
+        background-color:#000;
+        transition: background-color 0.3s ease-in-out;
+    }
+    .navbar-nav {
+        width: 100%;
+        text-align: center;
+        background-color: #000;
+    }
+    .navbar img{
+        width: auto;
+        height: 35px;
+    }
+    .navbar-nav .nav-item {
+        margin: 10px 0;
+    }
+    .full-pantalla{
+        padding: 50px 0px 0px;
+    }
+    .contenedor-ubicacion {
+        flex-direction: column;
+        text-align: center;
+    }
+    .ubicacion h2{
+        font-family: "bodoni";
+        color: #f8f8f8;
+        font-size: 28px;
+        margin-top: 10px;
+    }
+    .ubicacion p{
+        color: #f8f8f8;
+        font-size: 16px;
+    }
+
+    .ubicacion-info {
+        font-family: "bodoni";
+        text-align: center;
+        color: #f8f8f8;
+    }
+    .contenedor-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contenedor-producto {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .producto-info {
+        text-align: center;
+    }
+    .contenedor-opiniones {
+        flex-direction: column;
+        align-items: center;
+    }
+    .opiniones-scroll {
+        gap: 10px;
+        scroll-snap-type: x mandatory;
+    }
+
+    .opinion-card {
+        min-width: 90%;
+        max-width: 90%;
+    }
+}
