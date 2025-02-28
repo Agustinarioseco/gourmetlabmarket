@@ -57,6 +57,9 @@ document.addEventListener("DOMContentLoaded", function () {
         "./img/fondo-4.png",
         "./img/fondo-5.png",
         "./img/fondo-6.png",
+        "./img/fondo-7.png",
+        "./img/fondo-8.png",
+        "./img/fondo-9.png",
         "./img/fondo.png"
     ];
 

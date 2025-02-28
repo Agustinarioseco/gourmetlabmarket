@@ -77,3 +77,7 @@ async function mostrarOpiniones() {
 
 // 🔹 Llamamos a la función para cargar opiniones en la página
 mostrarOpiniones();
+document.addEventListener("DOMContentLoaded", function () {
+    let opinionesScroll = document.querySelector(".opiniones-scroll");
+    opinionesScroll.scrollLeft = opinionesScroll.scrollWidth / 2; // Mueve el scroll al centro
+});

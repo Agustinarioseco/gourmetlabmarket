@@ -37,10 +37,12 @@ body {
     width: 100%;
     transition: background 0.3s;
     z-index: 1000;
+    display: flex;
+    justify-content: flex-end; /* Alinea el menú a la derecha */
 }
 
 .navbar.scrolled {
-    background: #f8f8f8;
+    background: #000;
 }
 
 .navbar-brand img {
@@ -49,7 +51,7 @@ body {
 
 .navbar-nav .nav-link {
     color: white !important;
-    font-size: 24px;
+    font-size: 20px;
     transition: color 0.3s;
 }
 
@@ -68,6 +70,9 @@ body {
     background-color: #000;
     display: block;
     transition: 0.3s;
+}
+ul .navbar-nav{
+    align-items: end;
 }
 /*------------------------Main index------------------------*/
 .full-pantalla {
@@ -88,37 +93,35 @@ body {
 /* main parte de la info para usuarios */
 .ubicacion {
     text-align: center;
-    padding: 50px 20px;
+    padding: 20px 15px 40px;
     background-color: #010101;
 }
 
 main .ubicacion h2 {
     font-size: 28px;
     color: #f8f8f8;
-    margin-bottom: 10px;
-    font-family: "bodoni bold";
+    font-family: "bodoni medium italica";
     font-size: 36px;
-    margin-bottom:50px ;
+    margin-bottom:20px ;
 }
 
 .contenedor-cards {
     font-family: "bodoni";
     display: flex;
     justify-content: center;
-    gap: 50px;
+    gap: 15px;
     flex-wrap: wrap;
-    margin-top: 20px;
 }
 
 .contenedor-cards .card {
     background: #000;
-    padding: 20px;
+    padding: 10px;
     width: 250px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease-in-out;
-    border: #d4af37 solid 1px;
+    border: #D4AE41 solid 1px;
 }
 
 .card:hover {
@@ -126,51 +129,55 @@ main .ubicacion h2 {
 }
 
 .card img {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     margin-bottom: 10px;
     align-self: center;
 }
 
 .card h3 {
-    font-size: 24px;
-    color: #d4af37;
+    font-family: "bodoni bold";
+    font-size: 26px;
+    color: #D4AE41;
     margin-bottom: 5px;
 }
 
 .card p {
+    font-family: "bodoni medium italica";
     font-size: 16px;
     color: #fff;
     margin-bottom: 10px;
 }
 
 .btn button {
-    display: inline-block;
-    background: #d35400;
-    color: white;
+    color: #D4AE41;
     padding: 8px 12px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    transition: background 0.3s;
-    background-color: #111;
+    background-color: #222;
+    border: none;
+    outline: none;
+    box-shadow: none;
 }
 
-.btn:hover {
-    background: #222;
+.btn button:hover {
+    background: #D4AE41;
+    color: #010101;
 }
 
 /* seccion de productos destacados */
 .producto-destacado {
     font-family: "bodoni";
     text-align: center;
-    padding: 50px 20px;
-    background-color: #fff;
+    padding: 30px 20px;
+    background-color: #111;
 }
 
 .producto-destacado h2 {
     font-size: 28px;
-    color: #333;
+    font-family: "bodoni medium italica";
+    color: #D4AE41;
     margin-bottom: 20px;
 }
 
@@ -188,6 +195,7 @@ main .ubicacion h2 {
     max-width: 400px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border: #D4AE41 solid 3px;
 }
 
 .producto-info {
@@ -197,46 +205,76 @@ main .ubicacion h2 {
 
 .producto-info h3 {
     font-size: 24px;
-    color: #222;
+    color: #D4AE41;
     margin-bottom: 10px;
+}
+.producto-info h5 {
+    font-size: 20px;
+    color: #e9e9e9;
+    margin-bottom:10px;
 }
 
 .producto-info p {
     font-size: 16px;
-    color: #555;
+    color: #f5f5f5;
     margin-bottom: 10px;
 }
+.promo p {
+    font-size: 18px;
+    color: #D4AE41;
+}
+.descuentos{
+    font-size: 50px;
+    font-family: "bodoni medium italica";
+    color: #D4AE41;
+}
 
-.btn {
+.boton-producto {
+    font-family: "bodoni";
     display: inline-block;
-    background: #d35400;
-    color: white;
+    color: #ebebeb;
+    border: #D4AE41 solid 1px;
     padding: 10px 15px;
     border-radius: 5px;
     text-decoration: none;
-    font-weight: bold;
     transition: background 0.3s;
 }
 
-.btn:hover {
-    background: #b03a00;
+.boton-producto:hover {
+    background: #be9115;
 }
 
-/*opiniones*/
-
-.opinion-formulario {
-    font-family: "bodoni";
-    text-align: center;
+/* Contenedor que centra el formulario ---------------*/
+.opiniones .opinion-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    flex-direction: column;
+    width: 100%;
     margin-top: 30px;
 }
 
+/* Estilos del formulario */
+.opinion-formulario {
+    background: #1a1a1a; /* Color de fondo oscuro */
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #D4AE41; /* Borde dorado */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 350px; /* Ajusta el tamaño */
+    max-width: 90%;
+    margin: 0 auto; /* Centra el formulario */
+}
+
+/* Título del formulario */
 .opinion-formulario h3 {
     text-align: center;
     font-size: 22px;
-    color: #333;
+    color: #f7f7f7;
     margin-bottom: 15px;
 }
 
+/* Centrar los elementos del formulario */
 .opinion-formulario form {
     display: flex;
     flex-direction: column;
@@ -244,69 +282,98 @@ main .ubicacion h2 {
     gap: 10px;
 }
 
+/* Inputs y Textarea mejor alineados */
 .opinion-formulario input,
 .opinion-formulario textarea {
-    width: 80%;
-    max-width: 400px;
+    width: 90%; /* Ajuste en el tamaño */
+    max-width: 300px; /* Evita que sean demasiado anchos */
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #ccc;
     font-size: 16px;
+    background-color: #222;
+    color: #f5f5f5;
+    border: 1px solid #222;
+    outline: none;
 }
 
+/* Ajuste del área de texto */
 .opinion-formulario textarea {
     height: 100px;
     resize: none;
 }
 
+/* Botón mejorado */
 .opinion-formulario button {
-    background: #d35400;
-    color: white;
+    background: #D4AE41;
+    border: none;
+    color: black;
     padding: 10px 15px;
     border-radius: 5px;
-    font-weight: bold;
+    font-family: "bodoni bold";
+    font-size: 16px;
     cursor: pointer;
-    border: none;
-    transition: background 0.3s;
+    transition: 0.3s ease-in-out;
+    width: 90%;
+    max-width: 200px; /* Tamaño del botón */
 }
 
+/* Efecto hover mejorado */
 .opinion-formulario button:hover {
-    background: #b03a00;
+    background: #b39034;
+    color: black;
+    transform: scale(1.05); /* Efecto de agrandado */
 }
+
 
 .opiniones {
     font-family: "bodoni";
     text-align: center;
     padding: 50px 20px;
-    background-color: #f8f8f8;
+    background-color: #0a0a0a;
 }
 
 .opiniones h2 {
-    font-family:"bodoni";
-    font-weight: 600;
+    font-family:"bodoni medium italica";
     font-size: 28px;
-    color: #333;
+    color:#f5f5f5;
     margin-bottom: 20px;
 }
 
-/* Contenedor que permite el scroll horizontal */
-.opiniones-container {
-    font-family: "bodoni";
-    font-weight: 500;
-    font-style: normal;
+/* Contenedor principal */
+/* Contenedor del formulario */
+/* Contenedor principal: incluye testimonios y formulario */
+.opinion-container {
+    display: flex;
+    flex-direction: column; /* Asegura que testimonios y formulario estén en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+    gap: 30px; /* Espaciado entre testimonios y formulario */
+        background: #1a1a1a; /* Color de fondo oscuro */
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #D4AE41; /* Borde dorado */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 350px;
     max-width: 100%;
-    overflow: hidden;
-    position: relative;
+    margin: 0 auto; /* Evita desplazamientos laterales */
 }
+
+
 
 /* Contenedor deslizante */
 .opiniones-scroll {
     display: flex;
+    justify-content: center; /* Asegura que las opiniones estén centradas */
     gap: 20px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     padding-bottom: 20px;
+    max-width: 90%;
+    margin: 0 auto;
+    scroll-padding-left: 50%;
 }
 
 /* Ocultar barra de scroll en navegadores modernos */
@@ -315,106 +382,133 @@ main .ubicacion h2 {
 }
 
 /* Opiniones (Cards) */
+/* Opiniones (Cards) más pequeñas */
 .opinion-card {
-    min-width: 300px;
-    max-width: 300px;
+    color: #ebebeb;
+    min-width: 200px; /* Reducimos el ancho mínimo */
+    max-width: 220px; /* Reducimos el ancho máximo */
     flex: 0 0 auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background: #111;
+    border: #D4AE41 solid 1px;
+    padding: 15px; /* Reducimos el padding */
+    border-radius: 8px; /* Bordes más suaves */
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); /* Ajustamos la sombra */
     text-align: center;
-    font-style: normal;
+    font-size: 14px; /* Reducimos el tamaño de fuente */
     scroll-snap-align: center;
     font-family: "bodoni";
-    font-weight: bold;
 }
 
 /* Estilos para el nombre */
 .opinion-card h4 {
-    margin-top: 10px;
-    font-size: 16px;
-    color: #222;
-    font-weight: bold;
+    margin-top: 8px;
+    font-size: 13px; /* Reducción del tamaño de nombre */
+    color: #f5f5f5;
 }
+
+
 /*------------------------FOTTER--------------------*/
-
+/* Footer General */
 .footer {
-    background-color: #111;
-    color: #fff;
+    background-color: #0a0a0a; /* Fondo oscuro */
+    color: #f5f5f5; /* Texto blanco */
     padding: 40px 20px;
-    text-align: center;
+    border-top: 1px solid #222;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "bodoni regular";
 }
 
+/* Contenedor del footer */
 .footer-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between; /* Distribuye el logo y las redes */
     align-items: center;
     flex-wrap: wrap;
     max-width: 1200px;
-    margin: 0 auto;
-    padding-bottom: 20px;
+    width: 100%;
+    padding: 20px 0;
 }
 
-/* Estilos para Logo y Descripción */
+/* Sección Izquierda: Logo y descripción */
 .footer-logo {
-    max-width: 300px;
+    max-width: 50%;
     text-align: left;
 }
 
 .footer-logo img {
-    max-width: 150px;
+    width: 160px;
     margin-bottom: 10px;
 }
 
 .footer-logo p {
     font-size: 14px;
     color: #ccc;
+    max-width: 250px;
 }
 
-/* Estilos para la Información */
-.footer-info,
+/* Sección Derecha: Redes Sociales */
 .footer-redes {
-    text-align: left;
+    text-align: right;
 }
 
-.footer-info h3,
 .footer-redes h3 {
-    color: #d4af37; /* Dorado */
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 8px;
 }
 
-.footer-info p {
-    font-size: 14px;
-    color: #bbb;
-    margin: 5px 0;
-}
-
-.footer-info i {
-    color: #d4af37; /* Iconos dorados */
-    margin-right: 8px;
-}
-
-/* Estilos para Redes Sociales */
 .footer-redes a {
-    color: #d4af37; /* Dorado */
-    font-size: 20px;
-    margin: 0 10px;
-    transition: color 0.3s;
+    color: #d4ae41;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-redes a i {
+    margin-right: 8px;
+    font-size: 18px;
 }
 
 .footer-redes a:hover {
-    color: #fff;
+    text-decoration: underline;
 }
 
-/* Derechos de Autor */
+/* Copyright */
 .footer-bottom {
-    border-top: 1px solid #444;
-    padding-top: 15px;
+    text-align: center;
     font-size: 12px;
-    color: #bbb;
+    color: #999;
+    margin-top: 20px;
+    padding-top: 10px;
+    width: 100%;
+    border-top: 1px solid #222;
 }
+
+/* 📌 Ajustes Responsivos */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo,
+    .footer-redes {
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .footer-redes {
+        align-items: center;
+    }
+}
+
 
 /* RESPONSIVE: En móviles, columnas en una sola fila */
 @media (max-width: 768px) {
@@ -427,12 +521,22 @@ main .ubicacion h2 {
         margin-bottom: 20px;
         text-align: center;
     }
+    .contenedor-ubicacion {
+        flex-direction: column;
+        text-align: center;
+    }
+    .contenedor-producto {
+        flex-direction:column;
+        text-align: center;
+    }
+
+    .producto-info {
+        flex-direction: column;
+        text-align: center;
+    }
 }
-
-
-
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
     .navbar {
         background-color:#000;
         transition: background-color 0.3s ease-in-out;
@@ -445,12 +549,24 @@ main .ubicacion h2 {
 
     .navbar-nav .nav-item {
         margin: 10px 0;
+        background-color: #000;
+    }
+    .navbar.scrolled{
+        background-color: #000;
+    }
+    .nav-item .nav-link{
+        font-size: 20px;
     }
     .full-pantalla{
-        padding: 50px 0px 0px;
+        padding-top: 50px;
+    }
+    main .ubicacion h2{
+        font-family: "bodoni medium italica";
+        color: #f8f8f8;
+        font-size: 30px;
     }
     .contenedor-ubicacion {
-        flex-direction: column;
+        flex-direction: row;
         text-align: center;
     }
 
@@ -458,15 +574,16 @@ main .ubicacion h2 {
         text-align: center;
     }
     .contenedor-cards {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
     }
     .contenedor-producto {
-        flex-direction: column;
+        flex-direction:column;
         text-align: center;
     }
 
     .producto-info {
+        flex-direction: column;
         text-align: center;
     }
     .contenedor-opiniones {
@@ -478,13 +595,9 @@ main .ubicacion h2 {
         scroll-snap-type: x mandatory;
     }
 
-    .opinion-card {
-        min-width: 90%;
-        max-width: 90%;
-    }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 450px) {
     .navbar {
         background-color:#000;
         transition: background-color 0.3s ease-in-out;
@@ -498,21 +611,27 @@ main .ubicacion h2 {
         width: auto;
         height: 35px;
     }
-    .navbar-nav .nav-item {
+    main .navbar-nav .nav-item {
+        background-color: #000;
         margin: 10px 0;
     }
+    .navbar.scrolled{
+        background-color: #000;
+    }
+    .nav-item .nav-link{
+        font-size: 16px;
+    }
     .full-pantalla{
-        padding: 50px 0px 0px;
+        padding-top: 50px;
     }
     .contenedor-ubicacion {
         flex-direction: column;
         text-align: center;
     }
-    .ubicacion h2{
-        font-family: "bodoni";
+    main .ubicacion h2{
+        font-family: "bodoni medium italica";
         color: #f8f8f8;
-        font-size: 28px;
-        margin-top: 10px;
+        font-size: 24px;
     }
     .ubicacion p{
         color: #f8f8f8;
@@ -536,17 +655,91 @@ main .ubicacion h2 {
     .producto-info {
         text-align: center;
     }
-    .contenedor-opiniones {
-        flex-direction: column;
-        align-items: center;
-    }
+}
+/* 📌 Versión para móviles pequeños (máx. 450px) */
+@media (max-width: 450px) {
     .opiniones-scroll {
-        gap: 10px;
-        scroll-snap-type: x mandatory;
+        gap: 10px; /* Menos espacio entre tarjetas */
+        padding: 5px 0;
+        max-width: 100%;
     }
 
     .opinion-card {
-        min-width: 90%;
+        min-width: 180px;
+        max-width: 200px;
+        font-size: 12px;
+    }
+
+    .opinion-formulario {
+        width: 95%; /* Se ajusta mejor en pantallas más chicas */
+        max-width: 320px;
+    }
+}
+
+/* 📌 Versión para móviles medianos y tablets pequeñas (máx. 768px) */
+@media (max-width: 768px) {
+    .opinion-container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 20px;
+    }
+    .opiniones-scroll {
+        display: flex;
+        gap: 15px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        max-width: 100%;
+        padding: 10px 0;
+        justify-content: flex-start;
+    }
+    .opiniones-scroll::-webkit-scrollbar {
+        display: none;
+    }
+    .opinion-card {
+        min-width: 220px;
+        max-width: 240px;
+        flex: 0 0 auto;
+        background: #111;
+        border: 2px solid #D4AE41;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        font-size: 14px;
+        scroll-snap-align: center;
+        font-family: "bodoni";
+    }
+
+    .opinion-formulario {
+        width: 90%;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+}
+/* 📌 Versión para pantallas más grandes y tablets horizontales (máx. 1024px) */
+@media (max-width: 1024px) {
+    .opinion-container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 25px;
+    }
+
+    .opiniones-scroll {
+        gap: 20px;
         max-width: 90%;
+    }
+
+    .opinion-card {
+        min-width: 240px;
+        max-width: 260px;
+        font-size: 15px;
+    }
+
+    .opinion-formulario {
+        width: 85%;
+        max-width: 380px;
     }
 }
