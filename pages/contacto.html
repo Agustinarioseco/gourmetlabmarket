@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosotros | Gourmet Lab Market</title>
+    <title>Contacto | Gourmet Lab Market</title>
     <link rel="shortcut icon" href="../img/flaticon.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
@@ -39,51 +39,50 @@
 </header>
 <main>
     <section class="full-pantalla">
-        <img id="background-image" src="../img/fondo.png" alt="Fondo animado">
+        <img src="../img/contacto.png" alt="Fondo animado">
     </section>
-   <!-- SECCIÓN DE CONTACTO -->
-<section class="contacto">
-    <h2>📍 Contactanos</h2>
-
-    <div class="contacto-container">
-        
-        <!-- Formulario de Contacto con Formspree -->
-        <div class="formulario">
-            <h3>Envíanos tu consulta</h3>
-            <form id="form-contacto" action="https://formspree.io/f/mblgrrbj" method="POST">
-                <input type="text" name="nombre" placeholder="Tu Nombre" required>
-                <input type="email" name="email" placeholder="Tu Email" required>
-                <textarea name="mensaje" placeholder="Escribí tu mensaje..." required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
-
+<!-- SECCIÓN DE CONTACTO -->
+ <div class="contacto-main">
+    <div class="contact-container">
         <!-- Información de Contacto -->
-        <div class="info-contacto">
-            <h3>Nuestra Ubicación</h3>
+        <div class="contact-info">
+            <h3>Información de Contacto</h3>
             <p><i class="fas fa-map-marker-alt"></i> Av. Argentina 123, Neuquén</p>
-            <p><i class="fas fa-phone"></i> +54 299 123 4567</p>
             <p><i class="fas fa-envelope"></i> info@gourmetlab.com</p>
-
-            <!-- Redes Sociales -->
-            <div class="redes">
+            <p><i class="fas fa-phone"></i> +54 299 123 4567</p>
+            
+            <h3>Redes Sociales</h3>
+            <div class="social-icons">
                 <a href="#"><i class="fab fa-facebook"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
                 <a href="#"><i class="fab fa-whatsapp"></i></a>
             </div>
         </div>
-
+    
+        <!-- Formulario de Contacto -->
+        <div class="contact-form">
+            <h3>Envíanos un Mensaje</h3>
+            <form id="form-contacto" action="https://formspree.io/f/xayzb123" method="POST">
+                <div class="form-group">
+                    <input type="text" name="nombre" placeholder="Tu Nombre" required>
+                    <input type="email" name="email" placeholder="Tu Email" required>
+                </div>
+                <input type="text" name="asunto" placeholder="Asunto" required>
+                <textarea name="mensaje" placeholder="Escribí tu mensaje..." required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
     </div>
-
-    <!-- Mapa de Ubicación -->
+    
+    <!-- MAPA DE UBICACIÓN -->
     <div class="mapa">
         <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3132.5292433181636!2d-68.05972218467103!3d-38.951611979564235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960bcd0e338d897b%3A0xd1b5e6d01f55e01d!2sNeuqu%C3%A9n!5e0!3m2!1ses-419!2sar!4v1615565462048!5m2!1ses-419!2sar"
-            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3103.207874135409!2d-68.0520876!3d-38.9420792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a33d699f90f07%3A0x2a9ded38184b8d8!2sGourmet%20Lab%20Market!5e0!3m2!1ses-419!2sar!4v1741199762074!5m2!1ses-419!2sar" 
+        width="900" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+
         </iframe>
     </div>
-</section>
-
+ </div>
 </main>
 <footer class="footer">
     <div class="footer-container">
@@ -104,8 +103,6 @@
         <p>© 2025 Gourmet Lab Market. Todos los derechos reservados.</p>
     </div>
 </footer>
-<script type="module" src="../js/nosotros.js"></script>
-<script type="module" src="../js/firebase.js"></script>
 <script type="module" src="../js/script.js"></script> 
 </body>
 </html>
