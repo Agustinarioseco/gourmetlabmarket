@@ -3,33 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gourmet Lab Market</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+    <title>Nosotros | Gourmet Lab Market</title>
+    <link rel="shortcut icon" href="../img/flaticon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">Gourmet Lab Market</div>
-            <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#secciones">Secciones</a></li>
-                <li><a href="#novedades">Novedades</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+<header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <img class="imagen-logo" src="../img/logo-menu.png" alt="Logo Gourmet Lab">
+                </a>
+                <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                    aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="menu">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/nosotros.html">Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/novedades.html">Novedades</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
-    </header>
-    
-    <section id="inicio" class="hero">
-        <h1>Un mundo de sabores, un solo lugar.</h1>
-        <p>Descubrí la excelencia gastronómica en un solo espacio.</p>
+</header>
+<main>
+    <section class="full-pantalla">
+        <img id="background-image" src="../img/fondo.png" alt="Fondo animado">
     </section>
-    
+    <!-- SECCIÓN DE NOVEDADES -->
+<section class="novedades">
+    <h2>Últimas Novedades</h2>
+    <div class="novedades-container">
+
+        <div class="novedad">
+            <img src="../img/novedad1.png" alt="Novedad 1">
+            <div class="novedad-info">
+                <h3>Nuevo Producto en Gourmet Lab</h3>
+                <p>Descubre nuestra nueva línea de pastas rellenas con masa de cacao artesanales con ingredientes de primera calidad.</p>
+            </div>
+        </div>
+
+        <div class="novedad">
+            <img src="../img/novedad2.png" alt="Novedad 2">
+            <div class="novedad-info">
+                <h3>Producto destacado</h3>
+                <p>Ven a probar nuestros nuevos productos en una experiencia gastronómica única.</p>
+            </div>
+        </div>
+
+        <div class="novedad">
+            <img src="../img/novedad3.png" alt="Novedad 3">
+            <div class="novedad-info">
+                <h3>Promoción Especial de la Semana</h3>
+                <p>Aprovecha descuentos exclusivos en nuestros productos gourmet.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- CALENDARIO DE FECHAS DESTACADAS -->
+<!-- CALENDARIO DE FECHAS DESTACADAS -->
+<section class="calendario">
+    <h2>Fechas Destacadas</h2>
+    <div class="calendario-container">
+        <table class="calendar">
+            <thead>
+                <tr>
+                    <th>Dom</th>
+                    <th>Lun</th>
+                    <th>Mar</th>
+                    <th>Mié</th>
+                    <th>Jue</th>
+                    <th>Vie</th>
+                    <th>Sáb</th>
+                </tr>
+            </thead>
+            <tbody id="calendar-body">
+                <!-- Las fechas se generarán dinámicamente con JS -->
+            </tbody>
+        </table>
+    </div>
+</section>
+<!-- POP-UP PARA MOSTRAR INFO DE LA FECHA -->
+<div id="popupFecha" class="popup-fecha">
+    <div class="popup-content">
+        <span class="close" onclick="cerrarPopupFecha()">&times;</span>
+        <h3 id="fecha-titulo"></h3>
+        <p id="fecha-descripcion"></p>
+    </div>
+</div>
+</main>
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Logo y Descripción -->
+        <div class="footer-logo">
+            <img src="../img/logo-menu.png" alt="Gourmet Lab Market">
+            <p>Tu destino gastronómico en Neuquén. Sabores que inspiran, calidad que perdura.</p>
+        </div>
+        <!-- Redes Sociales -->
+        <div class="footer-redes">
+            <h3>Seguinos</h3>
+            <a href="https://www.instagram.com/gourmetlabmarket/"><i class="fab fa-instagram"></i>Instagram</a>
+            <a href="https://api.whatsapp.com/send/?phone=5492996561692&text&type=phone_number&app_absent=0"><i class="fab fa-whatsapp"></i>WhatsApp</a>
+        </div>
+    </div>
+    <!-- Derechos de Autor -->
+    <div class="footer-bottom">
+        <p>© 2025 Gourmet Lab Market. Todos los derechos reservados.</p>
+    </div>
+</footer>
+<script type="module" src="../js/nosotros.js"></script>
+<script type="module" src="../js/firebase.js"></script>
+<script type="module" src="../js/script.js"></script> 
 </body>
 </html>
