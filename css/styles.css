@@ -1277,7 +1277,6 @@ main .marcas{
     background: #D4AE41;
     color: #000;
 }
-
 /* 🔹 MAPA */
 .mapa {
     margin-top: 30px;
@@ -1286,8 +1285,6 @@ main .marcas{
     display: flex;
     justify-content: center;
 }
-
-
 /* 🔹 RESPONSIVE PARA MÓVILES */
 @media (max-width: 768px) {
     .contact-container {
