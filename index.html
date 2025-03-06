@@ -121,6 +121,24 @@
             <p id="mensaje-confirmacion" style="display:none; color: green; margin-top: 10px;">¡Gracias por tu opinión!</p>
         </div>
     </section>
+
+
+    <div id="popup-suscripcion" class="popup-overlay">
+        <div class="popup-content">
+            <span class="close-popup" onclick="cerrarPopup()">×</span>
+            <h2>Suscribite a Gourmet Lab</h2>
+            <p>Recibí nuestras promos y novedades en tu correo o unite a nuestro canal de WhatsApp.</p>
+            <form action="https://formspree.io/f/xnnpapry" method="post">
+                <input type="email" id="email" placeholder="Tu correo electrónico">
+                <button onclick="suscribirse()">Quiero Suscribirme</button>
+            </form>
+            <a href="https://wa.me/TUNUMEROWHATSAPP" target="_blank">
+                <button class="whatsapp-btn">Unirme al Canal de Difusión</button>
+            </a>
+    
+            <p class="no-thanks" onclick="cerrarPopup()">No gracias</p>
+        </div>
+    </div>
 </main>
 <footer class="footer">
     <div class="footer-container">
@@ -142,6 +160,28 @@
         <p>© 2025 Gourmet Lab Market. Todos los derechos reservados.</p>
     </div>
 </footer>
+<script>
+    document.addEventListener("mouseleave", function(event) {
+    if (event.clientY <= 0) {
+        document.getElementById("popup-suscripcion").style.display = "flex";
+    }
+});
+
+function cerrarPopup() {
+    document.getElementById("popup-suscripcion").style.display = "none";
+}
+
+function suscribirse() {
+    let email = document.getElementById("email").value;
+    if (email.trim() === "") {
+        alert("Por favor, ingresa un correo válido.");
+        return;
+    }
+    
+    alert("¡Gracias por suscribirte! Te enviaremos novedades pronto.");
+    cerrarPopup();
+}
+</script>
 <script type="module" src="js/firebase.js"></script>
 <script type="module" src="js/script.js"></script> 
 <script type="module" src="js/imagen.js"></script>

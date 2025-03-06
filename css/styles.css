@@ -1204,3 +1204,94 @@ main .ubicacion h2 {
         max-width: 90%; /* 🔹 Reduce el tamaño del mapa en móvil */
     }
 }
+
+/* 🔹 POP-UP GENERAL */
+/* 🔹 Estilos del Pop-up */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    width: 100%; height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.popup-content {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(../img/tytpopup.png);
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    width: 600px;
+    max-width: 90%;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.popup-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #f5f5f5;
+    font-family:"bodoni medium italica";
+}
+
+.popup-content p {
+    font-size: 18px;
+    color: #f5f5f5;
+    font-family:"bodoni";
+}
+
+.popup-content input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.popup-content button {
+    width: 100%;
+    padding: 14px;
+    background: #D4AE41;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-family: "bodoni";
+}
+
+.popup-content .whatsapp-btn {
+    background: #2c7547;
+    font-family: "bodoni";
+}
+
+.popup-content button:hover {
+    opacity: 0.9;
+}
+
+/* 🔹 Botón de Cerrar */
+.close-popup {
+    position: absolute;
+    top: 10px; right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.no-thanks {
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+    font-family: "bodoni bold";
+}
+
+.no-thanks:hover {
+    text-decoration: underline;
+}

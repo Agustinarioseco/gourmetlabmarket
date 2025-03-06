@@ -60,4 +60,36 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    let popupMostrado = false; // Variable para evitar mostrarlo varias veces
+
+    // Detecta cuando el usuario intenta salir del sitio
+    document.addEventListener("mouseleave", function (e) {
+        if (e.clientY < 10 && !popupMostrado) {
+            mostrarPopup();
+            popupMostrado = true; // Evita que se vuelva a mostrar
+        }
+    });
+
+    // Función para mostrar el pop-up
+    function mostrarPopup() {
+        document.getElementById("popup-suscripcion").style.display = "flex";
+    }
+
+    // Función para cerrar el pop-up
+    function cerrarPopup() {
+        document.getElementById("popup-suscripcion").style.display = "none";
+    }
+
+    // Enviar correo (FALTA CONFIGURAR ALMACENAMIENTO)
+    document.getElementById("form-suscripcion").addEventListener("submit", function (e) {
+        e.preventDefault();
+        
+        let email = document.getElementById("email").value;
+        console.log("Correo suscrito:", email);
+
+        alert("¡Gracias por suscribirte!");
+        cerrarPopup();
+    });
+});
 
