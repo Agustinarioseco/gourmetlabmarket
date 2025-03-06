@@ -413,7 +413,7 @@ main .ubicacion h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: "bodoni regular";
+    font-family: "bodoni";
 }
 
 /* Contenedor del footer */
@@ -476,6 +476,7 @@ main .ubicacion h2 {
 
 /* Copyright */
 .footer-bottom {
+    font-family: "bodoni";
     text-align: center;
     font-size: 12px;
     color: #999;
@@ -787,7 +788,6 @@ main .ubicacion h2 {
 
 /* 🔹 ESTILOS DE CADA TARJETA */
 .marca {
-    background: #222;
     border-radius: 15px;
     overflow: hidden;
     display: flex;
