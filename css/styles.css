@@ -787,25 +787,34 @@ main .ubicacion h2 {
 }
 
 /* 🔹 ESTILOS DE CADA TARJETA */
+.marcas-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
 .marca {
     border-radius: 15px;
     overflow: hidden;
-    display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
-    transition: transform 0.3s ease-in-out;
-    cursor: pointer;
     width: 100%;
     max-width: 400px; /* 🔥 Hacemos las tarjetas más grandes */
     height: auto;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    text-decoration: none
 }
-
 /* 🔹 IMÁGENES DENTRO DE LAS TARJETAS */
 .marca img {
     width: 100%;
     height: auto;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 /* 🔹 RESPONSIVE: 2 COLUMNAS EN TABLETS */
@@ -819,146 +828,17 @@ main .ubicacion h2 {
         max-width: 330px; /* 🔥 Tamaño mayor en tablet */
     }
 }
-
-/* 🔹 RESPONSIVE: 1 COLUMNA EN CELULARES */
-@media (max-width: 480px) {
-    .grid-marcas {
-        grid-template-columns: repeat(1, 1fr);
-        gap: 20px; /* 🔥 Más espacio entre cards */
-        padding: 10px;
-        width: 100%;
-    }
-    
-    .marca {
-        max-width: 100%; /* 🔥 Ocuparán TODO el ancho disponible */
-        margin: 0 auto; /* 🔥 Centrar las tarjetas */
-    }
-}
-
-/* POPUP */
-/* Fondo del pop-up */
-.popup {
-    font-family: "bodoni regular";
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Oscurece la pantalla */
-    justify-content: center;
-    align-items: center;
-}
-
-/* Imagen de fondo con filtro oscuro */
-.popup-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    filter: brightness(40%); /* Oscurece la imagen */
-    z-index: 1;
-}
-
-/* Contenido sobre la imagen */
-.popup-content {
-    position: relative;
-    background: rgba(255, 255, 255, 0.9); /* Blanco semitransparente */
-    padding: 20px;
-    width: 80%;
-    max-width: 400px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 2;
-}
-
-.popup h3 {
-    font-size: 22px;
-    color: #333;
-}
-
-.popup p {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 10px;
-}
-
-/* Botón de Instagram */
-.popup .btn {
-    background: #222;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    margin-top: 10px;
-    transition: background 0.3s;
-}
-
-.popup .btn:hover {
-    background: #D4AE41;
-}
-
-/* Botón de cerrar */
-.close {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 3;
-}
-/* 📌 Modo Responsive para Tablets y Móviles */
+/* 🔹 RESPONSIVE PARA TABLET Y CELULAR */
 @media (max-width: 768px) {
-    /* Asegurar que solo se vea una imagen a la vez */
-    .carousel {
-        gap: 10px;
-        scroll-snap-type: x mandatory;
-    }
-
-    .marca {
-        min-width: 75%; /* Ocupa casi toda la pantalla en móvil */
-        max-width: 75%;
-    }
-
-    .marca img {
-        width: 100%;
-        border-radius: 10px;
-    }
-
-    /* Ajustar el título del carrusel */
-    .marcas h2 {
-        font-size: 20px;
+    .marcas-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
-@media (max-width: 430px) {
-    /* Asegurar que solo se vea una imagen a la vez */
-    .carousel {
-        gap: 10px;
-        scroll-snap-type: x mandatory;
-    }
-
-    .marca {
-        min-width: 50%; /* Ocupa casi toda la pantalla en móvil */
-        max-width: 50%;
-    }
-
-    .marca img {
-        width: 100%;
-        border-radius: 10px;
-    }
-
-    /* Ajustar el título del carrusel */
-    .marcas h2 {
-        font-size: 20px;
+@media (max-width: 480px) {
+    .marcas-container {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
-
 /* -------------------------------------------SECCIÓN DE NOVEDADES --------------------------------*/
 .novedades {
     text-align: center;
