@@ -59,37 +59,60 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
-
 document.addEventListener("DOMContentLoaded", function () {
-    let popupMostrado = false; // Variable para evitar mostrarlo varias veces
+    const popupOverlay = document.querySelector(".popup-overlay");
+    const closePopup = document.querySelector(".close-popup");
+    const noThanks = document.querySelector(".no-thanks");
+    const formSuscripcion = document.getElementById("form-suscripcion");
 
-    // Detecta cuando el usuario intenta salir del sitio
-    document.addEventListener("mouseleave", function (e) {
-        if (e.clientY < 10 && !popupMostrado) {
-            mostrarPopup();
-            popupMostrado = true; // Evita que se vuelva a mostrar
+    // 🔹 Verificar si el pop-up ya fue cerrado antes
+    let popupCerrado = localStorage.getItem("popupClosed");
+
+    // 🔹 Mostrar el pop-up SOLO si no se ha cerrado antes
+    if (!popupCerrado) {
+        setTimeout(() => {
+            popupOverlay.style.display = "flex"; // Mostrar después de 2 segundos
+        }, 2000);
+    }
+
+    // 🔹 Función para detectar intención de salir del sitio
+    function detectarSalida(event) {
+        if (event.clientY < 10 && !localStorage.getItem("popupClosed")) {
+            console.log("El usuario intentó salir, mostrando pop-up.");
+            popupOverlay.style.display = "flex";
+            localStorage.setItem("popupClosed", "true"); // Guardar en Local Storage
+            document.removeEventListener("mouseleave", detectarSalida); // Eliminar evento
         }
-    });
-
-    // Función para mostrar el pop-up
-    function mostrarPopup() {
-        document.getElementById("popup-suscripcion").style.display = "flex";
     }
 
-    // Función para cerrar el pop-up
+    // 🔹 Si el pop-up no ha sido cerrado antes, activar detector de salida
+    if (!popupCerrado) {
+        document.addEventListener("mouseleave", detectarSalida);
+    }
+
+    // 🔹 Función para cerrar el pop-up y asegurarse de que no vuelva a aparecer
     function cerrarPopup() {
-        document.getElementById("popup-suscripcion").style.display = "none";
+        popupOverlay.style.display = "none";
+        localStorage.setItem("popupClosed", "true"); // Guardar en Local Storage
+        document.removeEventListener("mouseleave", detectarSalida); // Evita reactivación
+        console.log("Pop-up cerrado y guardado en localStorage");
     }
 
-    // Enviar correo (FALTA CONFIGURAR ALMACENAMIENTO)
-    document.getElementById("form-suscripcion").addEventListener("submit", function (e) {
-        e.preventDefault();
-        
-        let email = document.getElementById("email").value;
-        console.log("Correo suscrito:", email);
+    // 🔹 Eventos para cerrar el pop-up con "X" o "No gracias"
+    if (closePopup) closePopup.addEventListener("click", cerrarPopup);
+    if (noThanks) noThanks.addEventListener("click", cerrarPopup);
 
-        alert("¡Gracias por suscribirte!");
-        cerrarPopup();
-    });
+    // 🔹 Manejar envío de formulario
+    if (formSuscripcion) {
+        formSuscripcion.addEventListener("submit", function (e) {
+            e.preventDefault();
+            let email = document.getElementById("email").value;
+            console.log("Correo suscrito:", email);
+            alert("¡Gracias por suscribirte!");
+            cerrarPopup();
+        });
+    }
 });
+
+
 

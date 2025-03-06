@@ -59,7 +59,7 @@
                 <img src="./img/Group 329 (1).png" alt="Ubicación">
                 <h3>Nuestra sucursal</h3>
                 <p>Vení a conocernos</p>
-                <a href="" target="_blank" class="btn">
+                <a href="https://maps.app.goo.gl/aas7xhDgjiXciEnV7" target="_blank" class="btn">
                     <button>Ubicación</button>
                 </a>
             </div>
@@ -68,7 +68,7 @@
                 <img src="./img/Group 324.png" alt="PedidosYa">
                 <h3>PedidosYa</h3>
                 <p>Hacé tu pedido online</p>
-                <a href="https://www.pedidosya.com/" target="_blank" class="btn">
+                <a href="https://www.pedidosya.com.ar/restaurantes/neuquen/gourmet-lab-879a48f7-ab61-4ab5-9bae-2919757b6c9a-menu?utm_source=google&utm_medium=organic&utm_campaign=google_reserve_place_order_action" target="_blank" class="btn">
                     <button>Pedir Ahora</button>
                 </a>
             </div>
@@ -121,24 +121,6 @@
             <p id="mensaje-confirmacion" style="display:none; color: green; margin-top: 10px;">¡Gracias por tu opinión!</p>
         </div>
     </section>
-
-
-    <div id="popup-suscripcion" class="popup-overlay">
-        <div class="popup-content">
-            <span class="close-popup" onclick="cerrarPopup()">×</span>
-            <h2>Suscribite a Gourmet Lab</h2>
-            <p>Recibí nuestras promos y novedades en tu correo o unite a nuestro canal de WhatsApp.</p>
-            <form action="https://formspree.io/f/xnnpapry" method="post">
-                <input type="email" id="email" placeholder="Tu correo electrónico">
-                <button onclick="suscribirse()">Quiero Suscribirme</button>
-            </form>
-            <a href="https://wa.me/TUNUMEROWHATSAPP" target="_blank">
-                <button class="whatsapp-btn">Unirme al Canal de Difusión</button>
-            </a>
-    
-            <p class="no-thanks" onclick="cerrarPopup()">No gracias</p>
-        </div>
-    </div>
 </main>
 <footer class="footer">
     <div class="footer-container">
@@ -160,28 +142,23 @@
         <p>© 2025 Gourmet Lab Market. Todos los derechos reservados.</p>
     </div>
 </footer>
-<script>
-    document.addEventListener("mouseleave", function(event) {
-    if (event.clientY <= 0) {
-        document.getElementById("popup-suscripcion").style.display = "flex";
-    }
-});
+<div id="popup-suscripcion" class="popup-overlay">
+    <div class="popup-content">
+        <span class="close-popup" onclick="cerrarPopup()">×</span>
+        <h2>Suscribite a Gourmet Lab</h2>
+        <p>Recibí nuestras promos y novedades en tu correo o unite a nuestro canal de WhatsApp.</p>
+        <form id="form-suscripcion" action="https://formspree.io/f/xnnpapry" method="post">
+            <input type="email" id="email" placeholder="Tu correo electrónico">
+            <button type="submit">Quiero Suscribirme</button>
+        </form>
+        <a href="https://api.whatsapp.com/send/?phone=5492996561692&text&type=phone_number&app_absent=0" target="_blank">
+            <button class="whatsapp-btn">Unirme al Canal de Difusión</button>
+        </a>
 
-function cerrarPopup() {
-    document.getElementById("popup-suscripcion").style.display = "none";
-}
-
-function suscribirse() {
-    let email = document.getElementById("email").value;
-    if (email.trim() === "") {
-        alert("Por favor, ingresa un correo válido.");
-        return;
-    }
-    
-    alert("¡Gracias por suscribirte! Te enviaremos novedades pronto.");
-    cerrarPopup();
-}
-</script>
+        <p class="no-thanks" onclick="cerrarPopup()">No gracias</p>
+    </div>
+</div>
+<script type="module" src= "js/popup.js" ></script>
 <script type="module" src="js/firebase.js"></script>
 <script type="module" src="js/script.js"></script> 
 <script type="module" src="js/imagen.js"></script>
