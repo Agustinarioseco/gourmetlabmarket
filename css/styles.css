@@ -760,65 +760,80 @@ main .ubicacion h2 {
     margin: 0 auto;
 }
 
-/* CARRUSEL */
-
-/* CARRUSEL */
-.carousel-container {
-    overflow: hidden;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-   background-color: #111;
-   padding: 20px;
-}
-
-.carousel {
-    color: black;
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    background-color: #111;
-}
-
-.carousel::-webkit-scrollbar {
-    display: none;
-    background-color: #111;
-}
-main .marcas{
-    color: black;
-    background-color: #111;
+/* 🔹 TARJETAS DE MARCAS */
+/* SECCIÓN DE MARCAS */
+.marcas {
+    text-align: center;
     padding: 20px;
+    background-color: #010101;
+    color: #f5f5f5;
+    font-family: "bodoni medium italica";
 }
 .marcas h2{
-  font-family: "bodoni medium italica";
-  text-align: center;
-  font-size: 28px;
-  color: #f8f8f8;
+    font-size: 28px;
 }
 
-/* ✅ Asegurar que solo las imágenes dentro de cada marca crezcan */
+/* 🔹 SECCIÓN GENERAL */
+/* 🔹 SECCIÓN GENERAL */
+.grid-marcas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en escritorio */
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    justify-items: center; /* Centra las marcas */
+}
+
+/* 🔹 ESTILOS DE CADA TARJETA */
 .marca {
-    min-width: 300px;
-    max-width: 300px;
-    flex: 0 0 auto;
+    background: #222;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    transition: transform 0.3s ease-in-out;
     cursor: pointer;
-    transition: transform 0.3s ease-in-out; /* Suaviza el efecto */
+    width: 100%;
+    max-width: 400px; /* 🔥 Hacemos las tarjetas más grandes */
+    height: auto;
 }
 
-/* ✅ Aplicar el efecto solo a la imagen */
+/* 🔹 IMÁGENES DENTRO DE LAS TARJETAS */
 .marca img {
     width: 100%;
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
+    height: auto;
+    border-radius: 15px;
 }
 
-/* ✅ Al pasar el mouse, solo la imagen se agranda */
-.marca:hover img {
-    transform: scale(1.1); /* Crece un 10% */
+/* 🔹 RESPONSIVE: 2 COLUMNAS EN TABLETS */
+@media (max-width: 768px) {
+    .grid-marcas {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .marca {
+        max-width: 330px; /* 🔥 Tamaño mayor en tablet */
+    }
 }
 
+/* 🔹 RESPONSIVE: 1 COLUMNA EN CELULARES */
+@media (max-width: 480px) {
+    .grid-marcas {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px; /* 🔥 Más espacio entre cards */
+        padding: 10px;
+        width: 100%;
+    }
+    
+    .marca {
+        max-width: 100%; /* 🔥 Ocuparán TODO el ancho disponible */
+        margin: 0 auto; /* 🔥 Centrar las tarjetas */
+    }
+}
 
 /* POPUP */
 /* Fondo del pop-up */
