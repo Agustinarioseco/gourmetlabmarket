@@ -858,7 +858,6 @@ main .ubicacion h2 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -878,7 +877,7 @@ main .ubicacion h2 {
 /* Imagen de la novedad */
 .novedad img {
     width: 100%;
-    height: 200px;
+    height: 300px;
     object-fit: cover;
 }
 
@@ -948,7 +947,7 @@ main .ubicacion h2 {
 /* Encabezado (Días de la Semana) */
 .calendar thead {
     background: #333; /* Color oscuro para los nombres de los días */
-    color: white;
+    color: #ebebeb;
 }
 
 .calendar th {
@@ -960,7 +959,6 @@ main .ubicacion h2 {
 
 /* Celdas del calendario */
 .calendar th, .calendar td {
-    border: 1px solid #ddd;
     padding: 10px;
     text-align: center;
     width: 14%;
@@ -973,7 +971,7 @@ main .ubicacion h2 {
 
 /* Días normales */
 .calendar td {
-    background: white;
+    background: #e5e5e5;
     color: #333;
 }
 
@@ -1001,26 +999,33 @@ main .ubicacion h2 {
     background: rgba(0, 0, 0, 0.7);
     justify-content: center;
     align-items: center;
+    z-index: 9999;
 }
 
-.popup-content {
-    background: white;
+.popup-fecha .popup-fecha-content { /* <-- Cambié el nombre aquí */
+    background: #010101;
+    border: solid 1px #D4AE41;
     padding: 20px;
     width: 80%;
     max-width: 400px;
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    font-family: "bodoni";
+    color: #ebebeb;
 }
 
 /* Botón de cerrar */
-.close {
+.popup-fecha .close {
     position: absolute;
     top: 10px;
     right: 20px;
     font-size: 24px;
     cursor: pointer;
+    color: #e9e9e9;
 }
+
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
