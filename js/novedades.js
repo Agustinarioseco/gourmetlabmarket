@@ -9,7 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
         "11-3": { titulo: "#11F", descripcion: "Es nuestro 11 de fideos, aprovechá con 20% OFF en todas nuestras pastas frescas" },
         "14-3": { titulo: "#14P", descripcion: "Es 14 de pizzas, disfrutá de nuestras mejores pizzas con 20% OFF" },
         "20-3": { titulo: "#20R", descripcion: "Es nuestro 20 de raviolones, en el día del raviol celebrá con 20% OFF" },
-        "29-3": { titulo: "#29L", descripcion: "Es 29 no de ñoquis... DE LASAGNA, celebrá con 20% OFF en variedades selecionadas" }
+        "21-3": { titulo: "Día del tiramisú", descripcion: "Festejamos un día especial ¡El día del tiramisú! Vení y llevate nuestra nueva edición con pistacho ¡No te los pierdas!" },
+        "29-3": { titulo: "#29L", descripcion: "Es 29 no de ñoquis... ES DE LASAGNA, celebrá con 20% OFF en variedades selecionadas" }
     };
 
     // Obtener el mes y el año actual
